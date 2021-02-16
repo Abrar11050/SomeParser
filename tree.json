@@ -1,0 +1,332 @@
+[
+    {
+        "kind": "VarDecl",
+        "name": "i",
+        "type": "var",
+        "init": {
+            "kind": "Number",
+            "value": 8
+        }
+    },
+    {
+        "kind": "VarDecl",
+        "name": "j",
+        "type": "var",
+        "init": {
+            "kind": "Number",
+            "value": 6
+        }
+    },
+    {
+        "kind": "WhileStatement",
+        "condition": {
+            "kind": "Binary",
+            "left": {
+                "kind": "Identifier",
+                "value": "i"
+            },
+            "opr": "<",
+            "right": {
+                "kind": "Number",
+                "value": 6
+            }
+        },
+        "body": {
+            "kind": "BlockStatementList",
+            "list": [
+                {
+                    "kind": "ExprStatement",
+                    "expr": {
+                        "kind": "FunctionCall",
+                        "fname": {
+                            "kind": "Identifier",
+                            "value": "print"
+                        },
+                        "params": [
+                            {
+                                "kind": "Identifier",
+                                "value": "i"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "kind": "ExprStatement",
+                    "expr": {
+                        "kind": "Assignment",
+                        "assignop": "*=",
+                        "lhs": {
+                            "kind": "Identifier",
+                            "value": "j"
+                        },
+                        "rhs": {
+                            "kind": "Binary",
+                            "left": {
+                                "kind": "Identifier",
+                                "value": "i"
+                            },
+                            "opr": "+",
+                            "right": {
+                                "kind": "Number",
+                                "value": 2
+                            }
+                        }
+                    }
+                },
+                {
+                    "kind": "ExprStatement",
+                    "expr": {
+                        "kind": "PostInc",
+                        "primary": {
+                            "kind": "Identifier",
+                            "value": "i"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "kind": "VarDecl",
+        "name": "num",
+        "type": "var",
+        "init": {
+            "kind": "Binary",
+            "left": {
+                "kind": "Binary",
+                "left": {
+                    "kind": "Binary",
+                    "left": {
+                        "kind": "Binary",
+                        "left": {
+                            "kind": "Binary",
+                            "left": {
+                                "kind": "Number",
+                                "value": 6
+                            },
+                            "opr": "*",
+                            "right": {
+                                "kind": "Number",
+                                "value": 7
+                            }
+                        },
+                        "opr": "-",
+                        "right": {
+                            "kind": "Binary",
+                            "left": {
+                                "kind": "Number",
+                                "value": 9
+                            },
+                            "opr": "+",
+                            "right": {
+                                "kind": "Number",
+                                "value": 2
+                            }
+                        }
+                    },
+                    "opr": "*",
+                    "right": {
+                        "kind": "Number",
+                        "value": 4
+                    }
+                },
+                "opr": "-",
+                "right": {
+                    "kind": "Number",
+                    "value": 3
+                }
+            },
+            "opr": "/",
+            "right": {
+                "kind": "Number",
+                "value": 5
+            }
+        }
+    },
+    {
+        "kind": "VarDecl",
+        "name": "some",
+        "type": "const",
+        "init": {
+            "kind": "FunctionCall",
+            "fname": {
+                "kind": "MemberAccess",
+                "owner": {
+                    "kind": "Identifier",
+                    "value": "Something"
+                },
+                "member": {
+                    "kind": "Identifier",
+                    "value": "init"
+                }
+            },
+            "params": []
+        }
+    },
+    {
+        "kind": "IfStatement",
+        "test": {
+            "kind": "MemberAccess",
+            "owner": {
+                "kind": "Identifier",
+                "value": "some"
+            },
+            "member": {
+                "kind": "Identifier",
+                "value": "exists"
+            }
+        },
+        "yes": {
+            "kind": "BlockStatementList",
+            "list": [
+                {
+                    "kind": "ExprStatement",
+                    "expr": {
+                        "kind": "FunctionCall",
+                        "fname": {
+                            "kind": "MemberAccess",
+                            "owner": {
+                                "kind": "Identifier",
+                                "value": "some"
+                            },
+                            "member": {
+                                "kind": "Identifier",
+                                "value": "load"
+                            }
+                        },
+                        "params": []
+                    }
+                }
+            ]
+        },
+        "no": {
+            "kind": "BlockStatementList",
+            "list": [
+                {
+                    "kind": "ExprStatement",
+                    "expr": {
+                        "kind": "FunctionCall",
+                        "fname": {
+                            "kind": "MemberAccess",
+                            "owner": {
+                                "kind": "Identifier",
+                                "value": "some"
+                            },
+                            "member": {
+                                "kind": "Identifier",
+                                "value": "create"
+                            }
+                        },
+                        "params": []
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "kind": "ExprStatement",
+        "expr": {
+            "kind": "FunctionCall",
+            "fname": {
+                "kind": "Identifier",
+                "value": "justCall"
+            },
+            "params": [
+                {
+                    "kind": "Number",
+                    "value": 4
+                }
+            ]
+        }
+    },
+    {
+        "kind": "VarDecl",
+        "name": "element",
+        "type": "var",
+        "init": {
+            "kind": "ArrayAccess",
+            "owner": {
+                "kind": "Identifier",
+                "value": "someArray"
+            },
+            "member": {
+                "kind": "Number",
+                "value": 6
+            }
+        }
+    },
+    {
+        "kind": "ExprStatement",
+        "expr": {
+            "kind": "Assignment",
+            "assignop": "=",
+            "lhs": {
+                "kind": "MemberAccess",
+                "owner": {
+                    "kind": "Identifier",
+                    "value": "some"
+                },
+                "member": {
+                    "kind": "Identifier",
+                    "value": "prop"
+                }
+            },
+            "rhs": {
+                "kind": "MemberAccess",
+                "owner": {
+                    "kind": "Identifier",
+                    "value": "element"
+                },
+                "member": {
+                    "kind": "Identifier",
+                    "value": "value"
+                }
+            }
+        }
+    },
+    {
+        "kind": "ExprStatement",
+        "expr": {
+            "kind": "FunctionCall",
+            "fname": {
+                "kind": "MemberAccess",
+                "owner": {
+                    "kind": "MemberAccess",
+                    "owner": {
+                        "kind": "MemberAccess",
+                        "owner": {
+                            "kind": "Identifier",
+                            "value": "some"
+                        },
+                        "member": {
+                            "kind": "Identifier",
+                            "value": "prop"
+                        }
+                    },
+                    "member": {
+                        "kind": "Identifier",
+                        "value": "obj"
+                    }
+                },
+                "member": {
+                    "kind": "Identifier",
+                    "value": "func"
+                }
+            },
+            "params": [
+                {
+                    "kind": "Number",
+                    "value": 6
+                },
+                {
+                    "kind": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "kind": "String",
+                    "value": "Example"
+                }
+            ]
+        }
+    }
+]
